@@ -24,6 +24,11 @@ import pet.store.entity.PetStore;
 public class PetStoreService {
 	@Autowired
 	private PetStoreDao petStoreDao;
+	@Autowired
+	private CustomerDao customerDao;
+	@Autowired
+	private EmployeeDao employeeDao;
+
 
 	@Transactional(readOnly = false)
 	public PetStoreData savePetStore(PetStoreData petStoreData) {
